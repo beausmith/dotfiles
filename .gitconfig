@@ -76,6 +76,30 @@
 		fi \
 	}; f"
 
+
+
+	### START - beau's default aliases
+
+	cm = commit -m
+	cam = commit -a -m
+	am = commit --amend --verbose
+	co = checkout
+	cp = cherry-pick
+
+	# list branches sorted by last modified
+	b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+	# list aliases
+	la = "!git config -l | grep alias | cut -c 7-"
+
+	# log changed files only
+	lf = "git log --name-status"
+
+	### END - beau's default aliases
+
+
+
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
