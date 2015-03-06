@@ -46,3 +46,9 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Use npm global without sudo on OSX
+# http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/
+# An exception to the terminal window guidelines is Mac OS X’s Terminal.app, which runs a login shell by default for each new terminal window, calling .bash_profile instead of .bashrc. Other GUI terminal emulators may do the same, but most tend not to.
+# http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
+source ~/.bashrc
